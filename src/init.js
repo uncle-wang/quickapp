@@ -1,3 +1,4 @@
+import webview from './webview';
 export default (plus) => {
 	document.getElementById('share').addEventListener('click', () => {
 		plus.share.sendWithSystem({
@@ -30,5 +31,8 @@ export default (plus) => {
 	});
 	document.getElementById('fullscreen').addEventListener('click', () => {
 		plus.navigator.setFullscreen(!plus.navigator.isFullscreen());
+	});
+	document.getElementById('turnpage').addEventListener('click', () => {
+		webview.open('http://www.loveprob.com/home');
 	});
 };
